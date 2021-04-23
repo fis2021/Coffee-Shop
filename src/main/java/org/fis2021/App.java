@@ -15,10 +15,12 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        stage.setMinHeight(480);
+        stage.setMinWidth(640);
         initDirectory();
         UserService.initDatabase();
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/register.fxml"));
-        stage.setTitle("Inregistrare - Coffee Shop");
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+        stage.setTitle("Autentificare - CoffeeShop");
         stage.setScene(new Scene(root, 640, 480));
         stage.show();
     }
