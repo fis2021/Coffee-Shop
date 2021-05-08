@@ -43,7 +43,12 @@ public class Autentificare {
         try{
             String stored_password = UserService.getHashedUserPassword(username);
             if(stored_password.equals(encoded_password)){
-                loadHomePage();
+                if(UserService.getUser(username).getRole().equals("Client")){
+                    loadHomePage();
+                    return;
+                }
+
+                loginMessage.setText("nope");
                 return;
             }
 
@@ -73,7 +78,7 @@ public class Autentificare {
         try{
             User u = UserService.getUser(usernameField.getText());
             Stage stage = (Stage) loginMessage.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Rezerva-Comanda.fxml"));
             Parent homeRoot = loader.load();
             Scene scene = new Scene(homeRoot, 640, 480);
             stage.setTitle("Coffee Shop");
