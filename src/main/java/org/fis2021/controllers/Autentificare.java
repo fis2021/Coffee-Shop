@@ -79,6 +79,7 @@ public class Autentificare {
             User u = UserService.getUser(usernameField.getText());
             Stage stage = (Stage) loginMessage.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Rezerva-Comanda.fxml"));
+            stage.setUserData(u);
             Parent homeRoot = loader.load();
             Scene scene = new Scene(homeRoot, 640, 480);
             stage.setTitle("Coffee Shop");

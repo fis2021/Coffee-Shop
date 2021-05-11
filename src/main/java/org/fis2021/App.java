@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.fis2021.models.User;
+import org.fis2021.services.DBService;
 import org.fis2021.services.FileSystemService;
 import org.fis2021.services.UserService;
 
@@ -18,7 +20,8 @@ public class App extends Application {
         stage.setMinHeight(480);
         stage.setMinWidth(640);
         initDirectory();
-        UserService.initDatabase();
+        DBService.initDatabase();
+        UserService.initService();
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         stage.setTitle("Autentificare - CoffeeShop");
         stage.setScene(new Scene(root, 640, 480));
