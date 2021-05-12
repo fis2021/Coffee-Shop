@@ -1,5 +1,9 @@
 package org.fis2021.models;
 
+import org.fis2021.exceptions.InvalidCredentials;
+
+import java.util.Date;
+
 public class User {
 
     private String username;
@@ -67,4 +71,5 @@ public class User {
                 ", role='" + role + '\'' +
                 '}';
     }
+
 }
