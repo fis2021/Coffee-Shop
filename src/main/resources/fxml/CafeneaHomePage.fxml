@@ -5,7 +5,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis2021.controllers.CafeneaHomePage">
    <children>
-      <Button layoutX="223.0" layoutY="135.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="172.0" text="Vezi istoric" />
+      <Button onAction="#loadVeziIstoric" layoutX="223.0" layoutY="135.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="172.0" text="Vezi istoric" fx:id="buttonVeziIstoric"/>
       <Button layoutX="223.0" layoutY="256.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="172.0" text="Modifica meniu" />
    </children>
 </AnchorPane>
