@@ -65,7 +65,7 @@ public class Rezervare {
             Stage stage = (Stage) datePicker.getScene().getWindow();
             User currentUser = (User) stage.getUserData();
             RezervareService.addRes(currentUser.getUsername(), nameField.getText(), (Integer) CB.getSelectionModel().getSelectedItem(), datePicker.getValue().toString(), (String) ora.getSelectionModel().getSelectedItem());
-            errMessage.setText("Rezervare realizata cu succes!");
+            errMessage.setText("Rezervare finalizata cu succes!");
             resetForm();
         }
 

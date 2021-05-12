@@ -47,7 +47,10 @@ public class Autentificare {
                     loadHomePage();
                     return;
                 }
-
+                if(UserService.getUser(username).getRole().equals("Cafenea")){
+                    loadCafeneaHomePage();
+                    return;
+                }
                 loginMessage.setText("nope");
                 return;
             }
@@ -79,6 +82,24 @@ public class Autentificare {
             User u = UserService.getUser(usernameField.getText());
             Stage stage = (Stage) loginMessage.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Rezerva-Comanda.fxml"));
+            stage.setUserData(u);
+            Parent homeRoot = loader.load();
+            Scene scene = new Scene(homeRoot, 640, 480);
+            stage.setTitle("Coffee Shop");
+            stage.setScene(scene);
+        } catch (InvalidCredentials e){
+            loginMessage.setText(e.getMessage());
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void loadCafeneaHomePage(){
+        try{
+            User u = UserService.getUser(usernameField.getText());
+            Stage stage = (Stage) loginMessage.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CafeneaHomePage.fxml"));
             stage.setUserData(u);
             Parent homeRoot = loader.load();
             Scene scene = new Scene(homeRoot, 640, 480);
