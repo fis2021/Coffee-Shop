@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis2021.controllers.Comanda">
+    <children>
+        <Button onAction="#loadLivrare" layoutX="219.0" layoutY="256.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="163.0" text="Livrare la domiciliu" fx:id="buttonLivrare"/>
+        <Button onAction="#loadRidicare" layoutX="219.0" layoutY="132.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="163.0" text="Ridicare de la cafenea" fx:id="buttonRidicare"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis2021.controllers.Livrare">
+    <children>
+        <Label layoutX="138.0" layoutY="100.0" text="Nume" />
+        <Label layoutX="136.0" layoutY="155.0" text="Adresa" />
+        <Label layoutX="138.0" layoutY="213.0" text="Numar telefon" />
+        <TextField layoutX="271.0" layoutY="96.0" prefHeight="25.0" prefWidth="169.0" />
+        <TextField layoutX="271.0" layoutY="151.0" prefHeight="25.0" prefWidth="169.0" />
+        <TextField layoutX="271.0" layoutY="209.0" prefHeight="25.0" prefWidth="169.0" />
+        <Button layoutX="264.0" layoutY="286.0" mnemonicParsing="false" text="Plaseaza comanda" />
+    </children>
+</AnchorPane>
