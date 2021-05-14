@@ -11,9 +11,10 @@
         <Label layoutX="172.0" layoutY="100.0" text="Nume" />
         <Label layoutX="172.0" layoutY="231.0" text="Ora" />
         <Label layoutX="172.0" layoutY="164.0" text="Data" />
-        <TextField layoutX="231.0" layoutY="96.0" prefHeight="25.0" prefWidth="174.0" />
-        <TextField layoutX="231.0" layoutY="227.0" prefHeight="25.0" prefWidth="174.0" />
-        <DatePicker layoutX="231.0" layoutY="160.0" />
-        <Button layoutX="259.0" layoutY="311.0" mnemonicParsing="false" text="Plaseaza Comanda" />
+        <TextField fx:id="nume" layoutX="231.0" layoutY="96.0" prefHeight="25.0" prefWidth="174.0" />
+        <DatePicker fx:id="data" layoutX="231.0" layoutY="160.0" />
+        <Button layoutX="259.0" layoutY="311.0" mnemonicParsing="false" onAction="#addOrd" text="Plaseaza Comanda" />
+        <ChoiceBox fx:id="ora" layoutX="231.0" layoutY="227.0" prefHeight="25.0" prefWidth="174.0" />
+        <Label fx:id="errMessage" layoutX="259.0" layoutY="360.0" />
     </children>
 </AnchorPane>
