@@ -8,29 +8,31 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+public class Comanda {
+    @FXML
+    private Button buttonRidicare;
 
-public class RezervaComanda {
     @FXML
-    private Button buttonRezervare;
+    private Button buttonLivrare;
+
     @FXML
-    private Button buttonComanda;
-    @FXML
-    private void loadRezervare(){
+    private void loadRidicare(){
         try {
-            Stage stage = (Stage) buttonRezervare.getScene().getWindow();
-            Parent loginRoot = FXMLLoader.load(getClass().getResource("/fxml/Rezervare.fxml"));
+            Stage stage = (Stage) buttonRidicare.getScene().getWindow();
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/fxml/Ridicare.fxml"));
             Scene scene = new Scene(loginRoot, 640, 480);
-            stage.setTitle("Rezervare - CoffeeShop");
+            stage.setTitle("Comanda - CoffeeShop");
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     @FXML
-    private void loadComanda(){
+    private void loadLivrare(){
         try {
-            Stage stage = (Stage) buttonComanda.getScene().getWindow();
-            Parent loginRoot = FXMLLoader.load(getClass().getResource("/fxml/Comanda.fxml"));
+            Stage stage = (Stage) buttonLivrare.getScene().getWindow();
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/fxml/Livrare.fxml"));
             Scene scene = new Scene(loginRoot, 640, 480);
             stage.setTitle("Comanda - CoffeeShop");
             stage.setScene(scene);
