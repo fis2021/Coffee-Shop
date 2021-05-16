@@ -10,5 +10,6 @@
     <children>
         <Button onAction="#loadLivrare" layoutX="219.0" layoutY="256.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="163.0" text="Livrare la domiciliu" fx:id="buttonLivrare"/>
         <Button onAction="#loadRidicare" layoutX="219.0" layoutY="132.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="163.0" text="Ridicare de la cafenea" fx:id="buttonRidicare"/>
+        <Button fx:id="backButton" layoutX="14.0" layoutY="432.0" mnemonicParsing="false" onAction="#loadHomePage" text="Înapoi" />
     </children>
 </AnchorPane>
