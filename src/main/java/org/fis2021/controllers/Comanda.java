@@ -16,6 +16,9 @@ public class Comanda {
     private Button buttonLivrare;
 
     @FXML
+    private Button backButton;
+
+    @FXML
     private void loadRidicare(){
         try {
             Stage stage = (Stage) buttonRidicare.getScene().getWindow();
@@ -38,6 +41,20 @@ public class Comanda {
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void loadHomePage() {
+        try {
+            Stage stage = (Stage) backButton.getScene().getWindow();
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/fxml/Rezerva-Comanda.fxml"));
+            Scene scene = new Scene(loginRoot, 640, 480);
+            stage.setTitle("Coffee Shop");
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+
         }
     }
 }

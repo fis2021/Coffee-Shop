@@ -1,16 +1,17 @@
 package org.fis2021.controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.fis2021.models.Order;
 import org.fis2021.models.User;
 import org.fis2021.services.ComandaService;
 import org.fis2021.services.RezervareService;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -24,6 +25,8 @@ public class Ridicare {
     private DatePicker data;
     @FXML
     private Label errMessage;
+    @FXML
+    private Button backButton;
 
     public void initialize(){
         ComandaService.initService();
@@ -66,6 +69,19 @@ public class Ridicare {
         else{
             errMessage.setText("Prea multe comenzi existente la ora si data aleasa!");
             resetForm();
+        }
+    }
+
+    @FXML
+    private void loadComanda(){
+        try {
+            Stage stage = (Stage) backButton.getScene().getWindow();
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/fxml/Comanda.fxml"));
+            Scene scene = new Scene(loginRoot, 640, 480);
+            stage.setTitle("Comanda - Coffee Shop");
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

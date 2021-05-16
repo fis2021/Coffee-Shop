@@ -39,9 +39,6 @@ public class CafeneaHomePage {
     }
 
     @FXML
-    private Button buttonModificaMeniu;
-
-    @FXML
     public void loadModificaMeniu(){
         try {
             Stage stage = (Stage) buttonModificaMeniu.getScene().getWindow();

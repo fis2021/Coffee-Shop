@@ -14,8 +14,6 @@ public class RezervaComanda {
     private Button buttonRezervare;
     @FXML
     private Button buttonComanda;
-    @FXML
-    private Button buttonComanda;
 
     @FXML
     private Button backButton;

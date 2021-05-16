@@ -12,6 +12,8 @@ import java.io.IOException;
 public class ModificaMeniu {
     @FXML
     private Button buttonAdaugaProdus;
+    @FXML
+    private Button backButton;
 
     @FXML
     private void loadAdaugaProdus(){
@@ -20,6 +22,19 @@ public class ModificaMeniu {
             Parent loginRoot = FXMLLoader.load(getClass().getResource("/fxml/AdaugaProdus.fxml"));
             Scene scene = new Scene(loginRoot, 640, 480);
             stage.setTitle("Adauga Produs - Coffee Shop");
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void loadCafeneaHomePage(){
+        try {
+            Stage stage = (Stage) backButton.getScene().getWindow();
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/fxml/CafeneaHomePage.fxml"));
+            Scene scene = new Scene(loginRoot, 640, 480);
+            stage.setTitle("Coffee Shop");
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
