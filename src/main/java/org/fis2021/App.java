@@ -14,12 +14,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class App extends Application {
-
     @Override
     public void start(Stage stage) throws Exception {
         stage.setMinHeight(480);
         stage.setMinWidth(640);
-        initDirectory();
+        FileSystemService.initDirectory();
         DBService.initDatabase();
         UserService.initService();
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
@@ -28,14 +27,7 @@ public class App extends Application {
         stage.show();
     }
 
-    private void initDirectory() {
-        Path applicationHomePath = FileSystemService.APPLICATION_HOME_PATH;
-        if (!Files.exists(applicationHomePath))
-            applicationHomePath.toFile().mkdirs();
-    }
-
     public static void main(String[] args) {
         launch();
     }
-
 }

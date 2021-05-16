@@ -70,4 +70,7 @@ public class UserService {
         return md;
     }
 
+    public static ObjectRepository<User> getUserRepository() {
+        return userRepository;
+    }
 }
