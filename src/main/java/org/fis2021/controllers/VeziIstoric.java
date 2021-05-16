@@ -24,4 +24,23 @@ public class VeziIstoric {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private Button buton;
+
+    @FXML
+    void loadIstoricComenzi(){
+        try {
+            Stage stage = (Stage) buton.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/IstoricComenzi.fxml"));
+            Parent istoricComenziRoot = loader.load();
+            IstoricComenzi controller = loader.getController();
+            controller.setListContent();
+            Scene scene = new Scene(istoricComenziRoot, 640, 480);
+            stage.setTitle("Istoric Comenzi - CoffeeShop");
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
