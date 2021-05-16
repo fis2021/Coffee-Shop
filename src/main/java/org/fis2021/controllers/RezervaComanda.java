@@ -12,7 +12,8 @@ import java.io.IOException;
 public class RezervaComanda {
     @FXML
     private Button buttonRezervare;
-
+    @FXML
+    private Button buttonComanda;
     @FXML
     private Button buttonComanda;
 
@@ -45,6 +46,7 @@ public class RezervaComanda {
         }
     }
 
+
     public void loadLogin() {
         try {
             Stage stage = (Stage) backButton.getScene().getWindow();
@@ -58,3 +60,4 @@ public class RezervaComanda {
         }
     }
 }
+
