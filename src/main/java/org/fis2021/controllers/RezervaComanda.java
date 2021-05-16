@@ -15,6 +15,12 @@ public class RezervaComanda {
     @FXML
     private Button buttonComanda;
     @FXML
+    private Button buttonComanda;
+
+    @FXML
+    private Button backButton;
+
+    @FXML
     private void loadRezervare(){
         try {
             Stage stage = (Stage) buttonRezervare.getScene().getWindow();
@@ -26,6 +32,7 @@ public class RezervaComanda {
             e.printStackTrace();
         }
     }
+
     @FXML
     private void loadComanda(){
         try {
@@ -38,4 +45,19 @@ public class RezervaComanda {
             e.printStackTrace();
         }
     }
+
+
+    public void loadLogin() {
+        try {
+            Stage stage = (Stage) backButton.getScene().getWindow();
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+            Scene scene = new Scene(loginRoot, 640, 480);
+            stage.setTitle("Autentificare - CoffeeShop");
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+    }
 }
+

@@ -20,6 +20,10 @@ import java.io.IOException;
 public class CafeneaHomePage {
     @FXML
     private Button buttonVeziIstoric;
+    @FXML
+    private Button buttonModificaMeniu;
+    @FXML
+    private Button backButton;
 
     @FXML
     public void loadVeziIstoric(){
@@ -33,8 +37,10 @@ public class CafeneaHomePage {
             e.printStackTrace();
         }
     }
+
     @FXML
     private Button buttonModificaMeniu;
+
     @FXML
     public void loadModificaMeniu(){
         try {
@@ -47,4 +53,18 @@ public class CafeneaHomePage {
             e.printStackTrace();
         }
     }
+
+
+    public void loadLogin(){
+        try {
+            Stage stage = (Stage) backButton.getScene().getWindow();
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+            Scene scene = new Scene(loginRoot, 640, 480);
+            stage.setTitle("Autentificare - CoffeeShop");
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

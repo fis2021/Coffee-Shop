@@ -11,9 +11,22 @@ import java.io.IOException;
 
 public class VeziIstoric {
     @FXML
-    private Button buton;
-    @FXML
     private Button backButton;
+
+    public void loadCafeneaHomePage(){
+        try {
+            Stage stage = (Stage) backButton.getScene().getWindow();
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/fxml/CafeneaHomePage.fxml"));
+            Scene scene = new Scene(loginRoot, 640, 480);
+            stage.setTitle("Coffee Shop");
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private Button buton;
 
     @FXML
     void loadIstoricComenzi(){
@@ -30,5 +43,4 @@ public class VeziIstoric {
             e.printStackTrace();
         }
     }
-
 }
