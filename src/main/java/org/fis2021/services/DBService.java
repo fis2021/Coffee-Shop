@@ -18,4 +18,6 @@ public class DBService {
     public static Nitrite getDatabase(){
         return database;
     }
+
+    public static void closeDatabase(){ database.close();}
 }
