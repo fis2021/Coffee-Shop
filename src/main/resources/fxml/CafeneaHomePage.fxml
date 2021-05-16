@@ -7,6 +7,5 @@
    <children>
       <Button layoutX="223.0" layoutY="135.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="172.0" text="Vezi istoric" />
       <Button onAction="#loadModificaMeniu" layoutX="223.0" layoutY="256.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="172.0" text="Modifica meniu" fx:id="buttonModificaMeniu" />
-
    </children>
 </AnchorPane>

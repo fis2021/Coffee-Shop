@@ -8,4 +8,5 @@
         <Button layoutX="229.0" layoutY="121.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="163.0" text="Rezervari" />
         <Button fx:id="buton" layoutX="229.0" layoutY="241.0" mnemonicParsing="false" onAction="#loadIstoricComenzi" prefHeight="69.0" prefWidth="163.0" text="Comenzi" />
     </children>
+
 </AnchorPane>
